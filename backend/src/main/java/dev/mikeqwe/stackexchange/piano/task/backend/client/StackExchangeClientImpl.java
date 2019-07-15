@@ -13,6 +13,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 @Component
 public class StackExchangeClientImpl implements StackExchangeClient {
 
+    private static final String API_FILTER = "!9Z(-wno.B";
+
     private final RestTemplate restTemplate;
 
     private final String baseUrl;
@@ -44,6 +46,7 @@ public class StackExchangeClientImpl implements StackExchangeClient {
                 .queryParam("site", request.getSite())
                 .queryParam("page", request.getPageable().getPageNumber() + 1)
                 .queryParam("pagesize", request.getPageable().getPageSize())
+                .queryParam("filter", API_FILTER)
                 .toUriString();
     }
 }
