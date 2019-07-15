@@ -1,0 +1,16 @@
+<app-search-form (searchQuery)="search($event)"></app-search-form>
+
+<div class="search-form">
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table">
+        <tbody>
+        <ng-container *ngIf="questions">
+          <app-question-card *ngFor="let question of questions.content" [question]="question"></app-question-card>
+        </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <app-pagination *ngIf="questions" (selectedPage)="toPage($event)" [page]="questions" ></app-pagination>
+  </div>
+</div>

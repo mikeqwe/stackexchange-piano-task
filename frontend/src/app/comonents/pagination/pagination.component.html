@@ -1,0 +1,10 @@
+<nav class="d-flex justify-content-center align-items-center">
+  <ul class="pagination">
+    <li *ngIf="!page.first" (click)="select(page.number - 1)" class="page-item noselect"><a class="page-link"
+                                                                                   aria-label="Previous">
+      <span aria-hidden="true">«</span></a></li>
+    <li class="page-item"><a class="page-link noselect">{{ page.number + 1 }}</a></li>
+    <li *ngIf="!page.last" (click)="select(page.number + 1)" class="page-item noselect"><a class="page-link" aria-label="Next">
+      <span aria-hidden="true">»</span></a></li>
+  </ul>
+</nav>

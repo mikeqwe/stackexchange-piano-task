@@ -1,0 +1,11 @@
+<div class="search-form">
+  <div class="container">
+    <div class="intro">
+      <h4 class="text-center">stack<strong>overflow</strong> search</h4>
+    </div>
+    <form class="form-inline" method="post">
+      <div class="form-group"><input #searchInput class="form-control" name="search" placeholder="In title words"></div>
+      <div class="form-group"><button class="btn btn-primary" type="submit" (click)="search(searchInput.value)">SEARCH</button></div>
+    </form>
+  </div>
+</div>
