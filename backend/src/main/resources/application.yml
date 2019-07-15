@@ -1,0 +1,8 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /api/v1/
+stackexchange:
+  baseurl: http://api.stackexchange.com/2.2
+  endpoint:
+    search: /search
