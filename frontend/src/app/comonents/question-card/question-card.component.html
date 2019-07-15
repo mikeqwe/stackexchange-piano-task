@@ -1,0 +1,26 @@
+<tr>
+  <td>
+    <div class="card" [ngClass]="{'answered': question.answerCount > 0 }">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-10 col-xl-10">
+            <h4 [innerHTML]='question.title'></h4>
+<!--            <h6 class="text-muted mb-2"><strong>{{ question.owner.displayName }}</strong></h6>-->
+            <h6 class="text-muted mb-2"><strong [innerHTML]='question.owner.displayName'></strong></h6>
+            <h6 class="text-muted mb-2">asked {{ beautifyDate(question.creationDate) }}</h6><a target="_blank" href="{{ question.link }}">See question on stackoverflow</a></div>
+          <div class="col-lg-2 col-xl-2 offset-lg-0 offset-xl-0">
+            <div class="row">
+              <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><label class="col-form-label">{{ question.upVoteCount }} votes</label></div>
+            </div>
+            <div class="row">
+              <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><label class="col-form-label">{{ question.answerCount }} answers</label></div>
+            </div>
+            <div class="row">
+              <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><label class="col-form-label">{{ question.viewCount }} views</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
